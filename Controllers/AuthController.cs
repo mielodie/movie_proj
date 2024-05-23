@@ -71,7 +71,7 @@ namespace movie_project.Controllers
             }
         }
         [HttpPut("SetRole")]
-        [Authorize(Roles = "Admin")]
+        [Authorize(Roles = "ADMIN")]
         public async Task<IActionResult> SetRole(int userID)
         {
             return Ok(await _iAuthService.SetRole(userID));
